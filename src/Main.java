@@ -4,6 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.function.*;
 import java.util.stream.*;
+
 public class Main {
     public static void main(String[] args) {
         //ex 1
@@ -19,6 +20,7 @@ public class Main {
         List<Integer> list1 = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         findEvenNumbers(list1);
     }
+
     //ex1
     public static <T> void findMinMax(
             Stream<? extends T> stream,
@@ -31,6 +33,7 @@ public class Main {
             minMaxConsumer.accept(list.get(0), list.get(list.size() - 1));
         }
     }
+
     //ex.2
     public static void findEvenNumbers(List<Integer> list) {
         long evenCount = list.stream().filter(i -> i % 2 == 0).count();
